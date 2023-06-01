@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Date</title>
+    <script>
+        function displayDate() {
+            var currentDate = new Date();
+            var formattedDate = currentDate.toDateString();
+
+            var userInput = prompt("Enter a date:", formattedDate);
+
+            if (userInput !== null) {
+                document.getElementById("dateInput").value = userInput;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Display Date</h1>
+    <button onclick="displayDate()">Click to Display Date</button>
+    <br><br>
+    <label for="dateInput">Date:</label>
+    <input type="text" id="dateInput" readonly>
+</body>
+</html>
